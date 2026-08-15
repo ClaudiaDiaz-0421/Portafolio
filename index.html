@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAUDIADIAZ | Senior Requirements & QA Specialist</title>
+    <meta name="description"
+        content="Especialista Senior en Ingeniería de Requisitos y QA. Elevando la calidad del software a través del análisis funcional y la automatización estratégica.">
+
+    <!-- Metadatos de SEO -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://diazanalytics.com">
+
+    <!-- Tipografías Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --color-action: #2FB58D;
+            --color-action-glow: rgba(47, 181, 141, 0.3);
+            --color-trust: #075985;
+            --color-trust-glow: rgba(7, 89, 133, 0.15);
+            --color-bg: #F8FAFC;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+            --color-border: rgba(0, 0, 0, 0.05);
+            --color-white: #FFFFFF;
+            --glass: rgba(255, 255, 255, 0.7);
+            --shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            --transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+            --font-main: 'Inter', sans-serif;
+            --font-head: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-main);
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .bg-blobs {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            animation: move 20s infinite alternate;
+        }
+
+        .blob-1 {
+            background: var(--color-trust);
+            top: -10%;
+            left: -10%;
+        }
+
+        .blob-2 {
+            background: var(--color-action);
+            bottom: -10%;
+            right: -10%;
+            animation-delay: -5s;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0, 0) scale(1);
+            }
+
+            to {
+                transform: translate(10%, 10%) scale(1.1);
+            }
+        }
+
+        section {
+            padding: 80px 10%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        header {
+            position: sticky;
+            top: 20px;
+            z-index: 4000;
+            margin: 0 10%;
+            width: 80%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--color-trust);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--color-action);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            font-family: var(--font-head);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-trust);
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 14px !important;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            font-family: var(--font-head);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--color-action);
+            color: white;
+            box-shadow: 0 10px 20px var(--color-action-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px var(--color-action-glow);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(7, 89, 133, 0.2);
+            background: transparent;
+            color: var(--color-trust);
+        }
+
+        .btn-outline:hover {
+            background: rgba(7, 89, 133, 0.03);
+            border-color: var(--color-trust);
+            transform: translateY(-4px);
+        }
+
+        .hero {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 80vh;
+        }
+
+        .badge {
+            background: rgba(7, 89, 133, 0.05);
+            color: var(--color-trust);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: inline-block;
+            border: 1px solid rgba(7, 89, 133, 0.1);
+        }
+
+        h1 {
+            font-family: var(--font-head);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            color: var(--color-text);
+        }
+
+        h1 span {
+            background: linear-gradient(to right, var(--color-trust), var(--color-action));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            width: 100%;
+        }
+
+        .tag {
+            background: rgba(7, 89, 133, 0.05);
+            color: var(--color-trust);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 5000;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: none;
+            background: #f1f5f9;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-light);
+            transition: 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #e2e8f0;
+            color: var(--color-text);
+        }
+
+        .modal-title {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--color-trust);
+            margin-bottom: 20px;
+            padding-right: 30px;
+        }
+
+        .modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-body::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 10px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: rgba(7, 89, 133, 0.2);
+            border-radius: 10px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb:hover {
+            background: var(--color-trust);
+        }
+
+        .modal-body h4 {
+            font-family: var(--font-head);
+            color: var(--color-trust);
+            margin: 20px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-impact {
+            background: rgba(47, 181, 141, 0.05);
+            border-left: 4px solid var(--color-action);
+            padding: 20px;
+            border-radius: 4px 12px 12px 4px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                width: 94%;
+                margin: 10px 3%;
+            }
+
+            /* Mobile nav behavior */
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">CLAUDIA<span>DIAZ</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div style="display: flex; gap: 12px;">
+                <a href="https://www.linkedin.com/in/claudia-viviana-diaz-5b0b671a0" target="_blank"
+                    class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;" rel="noopener noreferrer">
+                    <img src="logo/linkedin.png" alt="LinkedIn Logo"
+                        style="width: 16px; height: 16px; object-fit: contain;"> LinkedIn
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="badge reveal">Senior Software Engineer | Requirements, QA & AI Agent Administrator</div>
+            <h1 class="reveal">Ingeniería de Software y Automatización para <span>Sistemas de Alta Complejidad</span>.
+            </h1>
+            <p class="reveal">Magíster e Ingeniera de Sistemas con 7 años de experiencia. Especialista en orquestar el
+                ciclo de vida del software, asegurando la calidad integral (QA) y liderando la <strong>Administración de
+                    Agentes de IA</strong> para maximizar la eficiencia funcional.</p>
+            <div class="reveal" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+                <a href="#metodologia" class="btn btn-primary">Ecosistema de Artefactos</a>
+                <a href="https://www.linkedin.com/in/claudia-viviana-diaz-5b0b671a0" target="_blank"
+                    class="btn btn-outline" style="border-radius: 14px !important;" rel="noopener noreferrer">
+                    <img src="logo/linkedin.png" alt="LinkedIn Icon"
+                        style="width: 22px; height: 22px; object-fit: contain;"> Perfil Profesional
+                </a>
+            </div>
+
+            <div class="reveal info-stats"
+                style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 60px; max-width: 1000px; width: 100%;">
+                <div class="glass-card"
+                    style="padding: 25px 30px; flex: 1; min-width: 250px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                    <span
+                        style="font-family: var(--font-head); font-size: 3.2rem; font-weight: 800; color: var(--color-text); line-height: 1;">7+</span>
+                    <span
+                        style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase; text-align: left; line-height: 1.3; max-width: 100px; letter-spacing: 0.5px;">AÑOS
+                        DE TRAYECTORIA</span>
+                </div>
+                <div class="glass-card"
+                    style="padding: 25px 30px; flex: 1; min-width: 250px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                    <span
+                        style="font-family: var(--font-head); font-size: 3.2rem; font-weight: 800; color: var(--color-text); line-height: 1;">98%</span>
+                    <span
+                        style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase; text-align: left; line-height: 1.3; max-width: 100px; letter-spacing: 0.5px;">ACEPTACIÓN
+                        PROYECTOS</span>
+                </div>
+                <div class="glass-card"
+                    style="padding: 25px 30px; flex: 1; min-width: 250px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                    <span
+                        style="font-family: var(--font-head); font-size: 3.2rem; font-weight: 800; color: var(--color-text); line-height: 1;">25%</span>
+                    <span
+                        style="font-size: 0.75rem; font-weight: 700; color: var(--color-text-light); text-transform: uppercase; text-align: left; line-height: 1.3; max-width: 100px; letter-spacing: 0.5px;">REDUCCIÓN
+                        DEFECTOS</span>
+                </div>
+
+                <div class="glass-card"
+                    style="padding: 25px 30px; flex: 1; min-width: 250px; display: flex; align-items: center; justify-content: center; gap: 14px;">
+
+                    <span style="color: var(--color-trust); display: flex; align-items: center; flex-shrink: 0;">
+                        <i data-lucide="bot" style="width: 44px; height: 44px; stroke-width: 1.5px;"></i>
+                    </span>
+
+                    <div
+                        style="display: flex; flex-direction: column; gap: 8px; font-family: var(--font-head); color: var(--color-text);">
+
+                        <!-- Encabezado -->
+                        <div style="display: flex; flex-direction: column; gap: 2px;">
+                            <span style="font-size: 1rem; font-weight: 800; line-height: 1.1;">
+                                IA Agent y Orchestration
+                            </span>
+                        </div>
+
+                        <!-- Cuerpo Justificado -->
+                        <p
+                            style="margin: 0; font-size: 0.82rem; line-height: 1.5; text-align: justify; hyphens: auto; -webkit-hyphens: auto;">
+                            Formación en orquestación de agentes autónomos con enfoque práctico en <strong>Google
+                                Antigravity</strong> y <strong>vibe coding</strong>, aplicando principios de ingeniería
+                            de requisitos. Experiencia en la creación de aplicaciones con agentes que programan
+                            automáticamente usando <strong>MCP</strong>, diseño de skills funcionales y modelado de
+                            workflows para la automatización de procesos y toma de decisiones inteligentes.
+                        </p>
+                        <p
+                            style="margin: 0; font-size: 0.82rem; line-height: 1.5; text-align: justify; hyphens: auto; -webkit-hyphens: auto;">
+                            Enfocado en transformar necesidades de negocio en soluciones escalables y automatizadas.
+                        </p>
+
+                        <div style="display: flex; flex-direction: column; gap: 2px;">
+                            <span style="font-size: 1rem; font-weight: 800; line-height: 1.1;">
+                                En formación · 2026
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Section -->
+        <section id="experiencia">
+            <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                <h2 style="font-family: var(--font-head); font-size: 2.8rem; color: var(--color-trust);">Recorrido
+                    Estratégico</h2>
+                <p style="color: var(--color-text-light); max-width: 800px; margin: 10px auto 0;">Construyendo productos
+                    digitales desde la definición hasta el despliegue.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto; position: relative;">
+                <!-- Timeline line -->
+                <div
+                    style="position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: rgba(7, 89, 133, 0.4);">
+                </div>
+
+                <!-- Item 1 -->
+                <div class="reveal" style="position: relative; padding-left: 60px; margin-bottom: 40px;">
+                    <div
+                        style="position: absolute; left: 8px; top: 0; width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--color-trust); background: var(--color-bg);">
+                    </div>
+                    <div class="glass-card" style="padding: 35px 40px;">
+                        <p style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); margin-bottom: 8px;">
+                            Marzo 2022 — Presente</p>
+                        <h3
+                            style="font-family: var(--font-head); font-size: 1.4rem; color: var(--color-text); margin-bottom: 4px;">
+                            Senior Requirements Engineer | Business Analyst</h3>
+                        <p
+                            style="font-weight: 600; color: var(--color-trust); margin-bottom: 16px; font-size: 0.95rem;">
+                            Empresa Global de Consultoría IT | Senior Level</p>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">Lideré la elicitación y
+                            especificación en más de 100 proyectos complejos de transformación digital. Reduje el
+                            retrabajo implementando estándares corporativos de especificación funcional adoptados por
+                            toda la organización.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="reveal" style="position: relative; padding-left: 60px; margin-bottom: 40px;">
+                    <div
+                        style="position: absolute; left: 8px; top: 0; width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--color-trust); background: var(--color-bg);">
+                    </div>
+                    <div class="glass-card" style="padding: 35px 40px;">
+                        <p style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); margin-bottom: 8px;">
+                            Marzo 2021 — Mayo 2022</p>
+                        <h3
+                            style="font-family: var(--font-head); font-size: 1.4rem; color: var(--color-text); margin-bottom: 4px;">
+                            Analista de Pruebas de Software (QA)</h3>
+                        <p
+                            style="font-weight: 600; color: var(--color-trust); margin-bottom: 16px; font-size: 0.95rem;">
+                            Grupo Líder en Servicios Financieros & QA</p>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">Ejecución de más de 150 casos de
+                            prueba para el sector bancario nacional. Gestión del ciclo completo de defectos y generación
+                            de métricas críticas de calidad para la alta dirección corporativa.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="reveal" style="position: relative; padding-left: 60px;">
+                    <div
+                        style="position: absolute; left: 8px; top: 0; width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--color-trust); background: var(--color-bg);">
+                    </div>
+                    <div class="glass-card" style="padding: 35px 40px;">
+                        <p style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); margin-bottom: 8px;">
+                            Octubre 2018 — Febrero 2021</p>
+                        <h3
+                            style="font-family: var(--font-head); font-size: 1.4rem; color: var(--color-text); margin-bottom: 4px;">
+                            Analista Funcional</h3>
+                        <p
+                            style="font-weight: 600; color: var(--color-trust); margin-bottom: 16px; font-size: 0.95rem;">
+                            Empresa Especialista en Soluciones Tecnológicas</p>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">Validación de requisitos
+                            complejos y ejecución de pruebas de aceptación e integración. Liderazgo en el diseño de
+                            planes de mejora basados en análisis de valor y eficiencia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit / Methodology Section -->
+        <section id="metodologia"
+            style="background: rgba(7, 89, 133, 0.02); border-top: 1px solid var(--color-border);">
+            <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                <span class="badge">Ecosistema de Artefactos</span>
+                <h2 style="font-family: var(--font-head); font-size: 2.5rem; color: var(--color-trust);">Metodología &
+                    Entregables</h2>
+                <p style="color: var(--color-text-light); max-width: 800px; margin: 15px auto 0;">Evidencia estratégica
+                    del ciclo de vida del software: desde la elicitación hasta la certificación QA.</p>
+            </div>
+
+            <div class="project-grid">
+                <!-- DDI -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('ddi')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="layout"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Ingeniería de
+                        Requisitos</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">DDI (Diseño Inicial)</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">Modelado técnico de integraciones y
+                        mapping de datos para Core Bancario.</p>
+                </div>
+
+                <!-- LRF -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('lrf')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="list-checks"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Analysis</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">LRF (Lista de Reglas)</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">Elicitación de requerimientos
+                        funcionales y flujos de negocio parametrizados.</p>
+                </div>
+
+                <!-- DRF -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('drf')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="file-text"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Compliance</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">DRF (Requerimientos)</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">Documentación técnica bajo estándar
+                        bancario (DRF).</p>
+                </div>
+
+                <!-- DHU -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('dhu')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="users"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Agile / QA</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">DHU (Historias de Usuario)</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">PBI basado en necesidades con
+                        criterios Gherkin y Mockups (DHU).</p>
+                </div>
+
+                <!-- QA Matrix -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('qa')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="check-square"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Certificación</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">Matriz de Casos de Prueba</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">Trazabilidad integral garantizando
+                        cobertura total de funcionalidades críticas.</p>
+                </div>
+
+                <!-- RNF -->
+                <div class="glass-card reveal" style="padding: 30px; cursor: pointer;" onclick="openModal('rnf')">
+                    <div style="color: var(--color-action); margin-bottom: 16px;"><i data-lucide="activity"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <span class="tag" style="margin-bottom: 12px; display: inline-block;">Arquitectura / Calidad</span>
+                    <h3 style="font-family: var(--font-head); margin-bottom: 10px;">RNF (Requisitos No Func.)</h3>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light);">Especificación de atributos de calidad
+                        como rendimiento, seguridad y disponibilidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Summary Section -->
+        <section id="proyectos">
+            <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                <h2 style="font-family: var(--font-head); font-size: 2.8rem; color: var(--color-trust);">Casos de Éxito
+                    de Alto Impacto</h2>
+            </div>
+            <div class="project-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Card 1 -->
+                <div class="glass-card reveal" style="padding: 40px; display: flex; flex-direction: column;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="layers"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 1.5rem; color: var(--color-trust); margin-bottom: 20px; line-height: 1.3;">
+                        Integración Modular de Seguros</h3>
+                    <p
+                        style="color: var(--color-text); font-size: 0.95rem; margin-bottom: 30px; flex-grow: 1; line-height: 1.6;">
+                        Liderazgo del diseño técnico para la utilización masiva de certificados de póliza.
+                        Sincronización entre Core Bancario y Módulos de Seguros mediante lógica parametrizada.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">SQL
+                            Server</span>
+                        <span
+                            style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Integraciones
+                            API</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">DDI</span>
+                        <span
+                            style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">GoAnywhere</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">IEEE
+                            830</span>
+                    </div>
+                    <button onclick="openModal('caseStudy1')"
+                        style="align-self: flex-start; background: transparent; border: 1.5px solid var(--color-trust); color: var(--color-trust); padding: 10px 20px; border-radius: 10px; font-family: var(--font-head); font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s;"
+                        onmouseover="this.style.background='var(--color-trust)';this.style.color='white';"
+                        onmouseout="this.style.background='transparent';this.style.color='var(--color-trust)';">
+                        <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Ver Caso de Estudio
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card reveal" style="padding: 40px; display: flex; flex-direction: column;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="credit-card"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 1.5rem; color: var(--color-trust); margin-bottom: 20px; line-height: 1.3;">
+                        Recaudos & Débito Automático</h3>
+                    <p
+                        style="color: var(--color-text); font-size: 0.95rem; margin-bottom: 30px; flex-grow: 1; line-height: 1.6;">
+                        Optimización integral del flujo de recaudo para matrículas. Reducción de reprocesos mediante la
+                        especificación de reglas de negocio en Débito Automático con GoAnywhere.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+                        <span
+                            style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Fintech</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">HU
+                            Gherkin</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Automation
+                            Ready</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Azure
+                            DevOps</span>
+                    </div>
+                    <button onclick="openModal('caseStudy2')"
+                        style="align-self: flex-start; background: transparent; border: 1.5px solid var(--color-trust); color: var(--color-trust); padding: 10px 20px; border-radius: 10px; font-family: var(--font-head); font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s;"
+                        onmouseover="this.style.background='var(--color-trust)';this.style.color='white';"
+                        onmouseout="this.style.background='transparent';this.style.color='var(--color-trust)';">
+                        <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Ver Caso de Estudio
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card reveal" style="padding: 40px; display: flex; flex-direction: column;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="cpu"
+                            style="width: 32px; height: 32px;"></i></div>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 1.5rem; color: var(--color-trust); margin-bottom: 20px; line-height: 1.3;">
+                        Monitoreo Inteligente de Colas</h3>
+                    <p
+                        style="color: var(--color-text); font-size: 0.95rem; margin-bottom: 30px; flex-grow: 1; line-height: 1.6;">
+                        Sistema de supervisión y reprocesamiento de colas SQS/Kafka para procesos críticos de
+                        facturación. Garantizando disponibilidad y consistencia de datos en tiempo real.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">AWS
+                            SQS/S3</span>
+                        <span
+                            style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Monitoring</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">QA
+                            Metrics</span>
+                        <span style="color: var(--color-text-light); font-weight: 600; font-size: 0.75rem;">Bug
+                            Prevention</span>
+                    </div>
+                    <button onclick="openModal('caseStudy3')"
+                        style="align-self: flex-start; background: transparent; border: 1.5px solid var(--color-trust); color: var(--color-trust); padding: 10px 20px; border-radius: 10px; font-family: var(--font-head); font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s;"
+                        onmouseover="this.style.background='var(--color-trust)';this.style.color='white';"
+                        onmouseout="this.style.background='transparent';this.style.color='var(--color-trust)';">
+                        <i data-lucide="book-open" style="width: 16px; height: 16px;"></i> Ver Caso de Estudio
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación Section -->
+        <section id="educacion"
+            style="background: rgba(7, 89, 133, 0.02); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+            <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                <h2 style="font-family: var(--font-head); font-size: 2.8rem; color: var(--color-trust);">Educación &
+                    Certificaciones</h2>
+            </div>
+
+            <div class="project-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Card 1 -->
+                <div class="glass-card reveal" style="padding: 40px;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="graduation-cap"
+                            style="width: 28px; height: 28px;"></i></div>
+                    <p style="font-weight: 700; color: var(--color-text); margin-bottom: 16px;">Postgrado</p>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 1.25rem; color: var(--color-text); margin-bottom: 12px; line-height: 1.4;">
+                        Maestría en Ingeniería de Software Avanzada</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light);">TECH Universidad Tecnológica
+                        (2023—2025) finalizada</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card reveal" style="padding: 40px;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="award"
+                            style="width: 28px; height: 28px;"></i></div>
+                    <p style="font-weight: 700; color: var(--color-text); margin-bottom: 16px;">Certificaciones Core</p>
+                    <ul
+                        style="font-size: 0.95rem; color: var(--color-text-light); list-style: none; padding: 0; line-height: 1.8;">
+                        <li>• ISTQB Foundation CTFL (2023)</li>
+                        <li>• Scrum Foundation (2023)</li>
+                        <li>• Administración de Agentes IA & Prompts (2026)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card reveal" style="padding: 40px;">
+                    <div style="color: var(--color-action); margin-bottom: 24px;"><i data-lucide="book"
+                            style="width: 28px; height: 28px;"></i></div>
+                    <p style="font-weight: 700; color: var(--color-text); margin-bottom: 16px;">Grado Académico</p>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 1.25rem; color: var(--color-text); margin-bottom: 12px; line-height: 1.4;">
+                        Ingeniera en Sistemas</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-light);">UNAD (Graduada 2025)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto"
+        style="padding: 60px 10%; border-top: 1px solid var(--color-border); text-align: center; color: var(--color-text-light);">
+        <div class="logo" style="margin-bottom: 30px; justify-content: center; display: flex;">
+            CLAUDIA<span>DIAZ</span>.</div>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/claudia-viviana-diaz-5b0b671a0" target="_blank" class="btn btn-outline"
+                style="border-radius: 14px !important;" rel="noopener noreferrer">
+                <img src="logo/linkedin.png" alt="LinkedIn Logo"
+                    style="width: 20px; height: 20px; object-fit: contain;"> LinkedIn Profile
+            </a>
+            <a href="javascript:void(0)" onclick="secureMail(this)" data-user="diaz37780" data-domain="gmail.com"
+                class="btn btn-primary">
+                <i data-lucide="mail"></i> Contactar
+            </a>
+        </div>
+        <p style="font-size: 0.9rem;">&copy; 2026 CLAUDIADIAZ. Todos los derechos reservados.</p>
+        <p style="font-size: 0.75rem; margin-top: 8px;">Diseñado para altos estándares en Requisitos y Aseguramiento de
+            Calidad.</p>
+    </footer>
+
+    <!-- Modal Fragment -->
+    <div id="artefactModal" class="modal" onclick="if(event.target == this) closeModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()"><i data-lucide="x"></i></button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Reveal effect
+        const revObs = new IntersectionObserver((es) => {
+            es.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+        // Email Security
+        function secureMail(el) {
+            const u = el.getAttribute('data-user');
+            const d = el.getAttribute('data-domain');
+            window.location.href = `mailto:${u}@${d}`;
+        }
+
+        // Modal Logic
+        const modalData = {
+            'caseStudy1': {
+                title: 'Caso de Estudio: Integración de Seguros — Utilizaciones Masivas',
+                context: 'Entorno Bancario–InsurTech. Automatización del proceso de generación y envío de utilizaciones masivas para la facturación de cuotas derivadas de inclusiones en pólizas activas.',
+                value: 'Especificación funcional completa (DRF v1.3) para migrar de lógica fija a un sistema 100% parametrizable, eliminando la necesidad de cambios en código para modificar reglas de negocio.',
+                impact: 'Reducción del tiempo de cambio de regla de negocio de ~3 días sprint a ~15 minutos. Auditoría 100% trazable por ciclo de ejecución. Aprobado en primera revisión sin solicitudes de cambio posteriores.',
+                structure: ['1. Contexto del Proyecto', '2. Valor Estratégico', '3. Enfoque de Solución', '4. Herramientas y Tecnologías', '5. Resultados e Impacto', '6. Trazabilidad QA'],
+                exampleTitle: 'Enfoque de Solución — Lógica Parametrizable',
+                example: `
+                <div style="background: rgba(7,89,133,0.04); border-left: 3px solid var(--color-trust); padding: 16px; border-radius: 4px 12px 12px 4px; margin-bottom: 18px; font-size: 0.82rem; color: #334155; font-style: italic;">
+                    ⚠️ Este documento ha sido anonimizado con fines de confidencialidad. Los nombres de clientes, identificadores y códigos propietarios han sido reemplazados por referencias genéricas del sector.
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Contexto del Proyecto</h4>
+                <p style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 10px;">
+                    El proyecto se ejecutó en un ecosistema <strong>Bancario–InsurTech</strong>, caracterizado por la integración entre el Core bancario (créditos revolventes), el sistema de administración de pólizas, una plataforma de pagos (API externa) y herramientas de orquestación de procesos.
+                </p>
+                <p style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 16px;">
+                    El objetivo fue automatizar la <strong>generación, estructuración y envío de archivos de utilizaciones masivas</strong>, impactando directamente la facturación, conciliación financiera y control de cartera.
+                </p>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Valor Estratégico Aportado</h4>
+                <p style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 6px;">La <strong>DRF v1.3</strong> elaborada permitió:</p>
+                <ul style="font-size: 0.87rem; color: #334155; line-height: 1.8; padding-left: 18px; margin-bottom: 16px;">
+                    <li>Migrar de <strong>lógica rígida (hardcoded)</strong> a un esquema <strong>dinámico y parametrizable</strong></li>
+                    <li>Reducir la dependencia de cambios en código para modificar reglas de negocio</li>
+                    <li>Fortalecer la trazabilidad entre requerimientos, implementación y validación</li>
+                    <li>Habilitar al negocio para gestionar configuraciones clave directamente desde parámetros</li>
+                </ul>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Solución — Antes vs. Después</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                    <div style="background: rgba(220,38,38,0.04); border: 1px solid rgba(220,38,38,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #dc2626; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">❌ Antes (Lógica Fija)</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Reglas embebidas en el código. Exclusión de procedencias definida manualmente. Cualquier cambio requería ajuste técnico y nuevo despliegue.</p>
+                    </div>
+                    <div style="background: rgba(22,163,74,0.04); border: 1px solid rgba(22,163,74,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #16a34a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">✅ Después (Parametrizable)</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Condiciones gestionadas desde tabla de parámetros en base de datos. Modificación sin intervención técnica. Adaptación ágil y segura a cambios del negocio.</p>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Trazabilidad QA</h4>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 16px;">
+                    <tr style="background: rgba(7, 89, 133, 0.08); color: var(--color-trust);">
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; width: 90px;">ID Req.</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; text-align: left;">Escenario de Prueba</th>
+                    </tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">RQF-001</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validar filtro parametrizable: solo procedencias configuradas generan registros</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">RQF-002</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validar exclusión de registros cuando total_cuota = 0</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">RQF-003</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validar invocación de API de pagos cuando total_cuota &lt; 0</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">RQF-004</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validar nombre de archivo: formato UtilizacionRevolventes_AAAAMMDD</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">RQF-005</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validar registro de auditoría: timestamp, resultado y conteo de registros</td></tr>
+                </table>
+
+                <div style="background: rgba(47,181,141,0.06); border-left: 4px solid var(--color-action); border-radius: 4px 12px 12px 4px; padding: 16px; font-size: 0.87rem; color: #334155; line-height: 1.6;">
+                    <strong style="color: var(--color-action);">Conclusión:</strong> La implementación evolucionó de un sistema rígido a una arquitectura flexible y escalable, alineada con principios de <strong>ingeniería de requisitos, trazabilidad y parametrización</strong>, generando valor tangible tanto para el negocio como para el equipo técnico.
+                </div>
+                `
+            },
+            'ddi': {
+                title: 'DDI: Diseño Inicial de Sistema',
+                context: 'Poyecto de integración masiva (Core Bancario / Módulos de Seguros).',
+                value: 'Definición de Mapping de datos, integraciones de servicios y lógica de flujos transaccionales.',
+                impact: 'Reducción del 30% en incidentes por desalineación técnica durante el desarrollo de microservicios.',
+                structure: ['1. Objetivo e Interesados', '2. Diagramas de Contexto / Arquitectura', '3. Mapeo de Datos (Mapping)', '4. Diccionario de Servicios (APIs)', '5. Reglas de Integración'],
+                exampleTitle: 'CARÁCTERÍSTICAS DE USABILIDAD',
+                example: `
+                <div style="color: #0f172a; font-weight: 500; font-size: 0.95rem; margin-bottom: 12px; margin-top: 5px;">
+                    PROTOTIPADO
+                </div>
+                
+                <div style="color: #004d66; font-size: 0.95rem; margin-bottom: 5px; display: flex; align-items: center; gap: 6px;">
+                    <span style="border: 1px solid #777; font-size: 14px; font-weight: bold; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; line-height: 1; cursor: default;">+</span> MOCKUP_13. Funcionalidad generación de caratulas
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif; font-size: 0.85rem; border: 2px solid #000; background: #fff; color: #000; margin-bottom: 10px;">
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px 10px; width: 25%;">Nombre</td>
+                        <td colspan="2" style="border: 1px solid #000; padding: 8px 10px; color: #334155;">Generación de Carátulas Digitales (Registro)</td>
+                        <td style="border: 1px solid #000; padding: 8px 10px; background: #e5e5e5; width: 15%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px 10px;">Propósito</td>
+                        <td colspan="3" style="border: 1px solid #000; padding: 8px 10px; text-align: justify; color: #334155;">Proporcionar una interfaz analítica que permita configurar, validar y emitir carátulas resumen. Minimiza el error de digitación mediante carga predictiva y validación visual por bloques semánticos.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #000; padding: 8px 10px;">RQF Asociado</td>
+                        <td colspan="3" style="border: 1px solid #000; padding: 8px 10px; color: #334155;">RQF-045 - Diseño y emisión de carátulas de vinculación.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border: 1px solid #000; padding: 8px 10px;">
+                            <div style="margin-bottom: 12px; font-size: 0.95rem;">Descripción del funcionamiento y la pantalla que se está rescribiendo:</div>
+                            <div style="font-size: 0.85rem; text-align: justify; margin-bottom: 15px; color: #334155;">
+                                La pantalla moderniza el antiguo formulario monolítico, dividiendo la entrada de datos en: Datos Personales, Datos Bancarios y Datos del Tercero. El sistema inyecta nativamente los datos básicos mostrados en post-its amarrillos (Solo lectura). Adicionalmente, el formulario incluye <strong>lógica condicional</strong>: solo se despliega la sección obligatoria de "Datos personales del tercero" si el usuario indica que la cuenta <em>no es propia</em> en el bloque anterior. La acción de "Actualizar" orquesta el consumo de la API de integración registrando la información final en base de datos.
+                            </div>
+                            <div style="width: 100%; border: 2px solid #000; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; overflow: hidden; padding: 10px;">
+                                <img src="Anexos/Imagen1.png" alt="Prototipo Mockup 13 - Generación de carátulas" style="max-width: 100%; max-height: 400px; object-fit: contain;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                `
+            },
+            'lrf': {
+                title: 'LRF: Lista de Requerimientos Funcionales',
+                context: 'Elicitación de necesidades para automatización de recaudos financieros.',
+                value: 'Identificación y priorización de reglas de negocio para procesamiento de débitos automáticos.',
+                impact: 'Aseguramiento de alineación total entre las expectativas de negocio y la capacidad técnica instalada.',
+                structure: ['1. Requerimientos de Negocio', '2. Matriz de Requisitos Funcionales', '3. Reglas de Negocio', '4. Matriz de Roles y Perfiles', '5. Requisitos No Funcionales'],
+                exampleTitle: 'Ejemplo de Especificación del Requisito',
+                example: `
+                <h4 style="margin-bottom: 12px; font-size: 1rem; color: var(--color-text);">4.2 Actualización datos personales del representante legal</h4>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; background: rgba(255, 255, 255, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                    <tr>
+                        <th style="border: 1px solid rgba(0,0,0,0.1); padding: 10px; width: 15%; text-align: left; background: rgba(7, 89, 133, 0.1); color: var(--color-trust);">4.2.1</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.1); padding: 10px; text-align: left; background: rgba(7, 89, 133, 0.1); color: var(--color-trust);">Actualización datos personales del representante legal</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.1); padding: 10px; font-weight: 600; color: #334155;">Impacto</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.1); padding: 10px; color: #334155; font-style: italic;">Funcionalidad Nueva</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border: 1px solid rgba(0,0,0,0.1); padding: 10px; text-align: center; font-weight: 600; background: rgba(7, 89, 133, 0.05); color: var(--color-trust);">Especificación del Requisito</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border: 1px solid rgba(0,0,0,0.1); padding: 15px; color: #334155; text-align: justify; line-height: 1.5;">
+                            El sistema debe ejecutar la validación de la información de la persona jurídica, verificando si la fecha de registro o la última fecha de actualización de sus datos es igual o superior a treinta (30) días.<br><br>
+                            
+                            Cuando se cumpla esta condición (<em>es decir, cuando la información tenga una antigüedad igual o superior a treinta (30) días</em>), el sistema debe realizar una consulta al sistema <strong>Informa Colombia</strong> con el fin de verificar la existencia del NIT de la empresa.<br><br>
+                            
+                            <div style="text-align: center; margin-bottom: 12px;"><strong><u>NIT existente en Informa Colombia</u></strong></div>
+                            
+                            Cuando el <strong>NIT exista</strong> en el sistema <strong>Informa Colombia</strong>, el sistema debe <strong>actualizar en Salesforce Cobis</strong> los datos del <strong>representante legal</strong> obtenidos en la consulta y <strong>registrar la operación en el log de auditoría</strong>. A continuación, se listan los campos que se requieren para ser actualizados:
+                            
+                            <ul style="list-style-type: none; margin-left: 0; padding-left: 15px; margin-top: 10px; margin-bottom: 15px; display: flex; flex-direction: column; gap: 4px;">
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    Número de documento del representante legal (<em>Ej. CC, CE, Pasaporte</em>)
+                                </li>
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    Nombre completo
+                                </li>
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    Correo electrónico
+                                </li>
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    Número de celular
+                                </li>
+                            </ul>
+
+                            <div style="text-align: center; margin-bottom: 12px;"><strong><u>NIT no existente en Informa Colombia</u></strong></div>
+                            
+                            Cuando se realice la consulta al sistema <strong>Informa Colombia</strong> y se <strong>identifique que el NIT no fue encontrado</strong>, el sistema <strong>no debe realizar ninguna actualización</strong> sobre los <strong>datos del representante legal</strong> en <strong>Salesforce Cobis</strong>.<br><br>
+                            
+                            Además, debe <strong>registrar</strong> el <strong>evento</strong> en el <strong>log</strong> e <strong>indicar</strong> que, <strong>a pesar de cumplirse la regla</strong> para la <strong>actualización</strong> de los <strong>datos</strong> del representante legal, el <strong>NIT no fue encontrado</strong> en <strong>Informa Colombia</strong>.<br><br>
+                            
+                            <div style="text-align: center; margin-bottom: 12px;"><strong><u>Registro de auditoría</u></strong></div>
+                            
+                            El sistema debe registrar en el <strong>log de auditoría</strong>, incluyendo <strong>fecha y hora</strong>, los siguientes eventos:
+                            
+                            <ul style="list-style-type: none; margin-left: 0; padding-left: 15px; margin-top: 10px; display: flex; flex-direction: column; gap: 4px;">
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    El resultado de la validación de la condición de antigüedad de la información (cumple o no cumple).
+                                </li>
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    La ejecución de la consulta al sistema <strong>Informa Colombia</strong>.
+                                </li>
+                                <li style="position: relative; padding-left: 15px;">
+                                    <span style="position: absolute; left: 0; top: 0;"><i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-action);"></i></span>
+                                    El resultado de la consulta, indicando si el NIT existe o no existe.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                `
+            },
+            'drf': {
+                title: 'DRF: Documento de Requerimiento Funcional',
+                context: 'Gestión documental para cumplimiento regulatorio (Estándar DRF).',
+                value: 'Documento maestro de especificación funcional para paso a mesa de servicios.',
+                impact: 'Trazabilidad y respaldo documental auditado para la certificación exitosa de productos bancarios.',
+                structure: ['1. Introducción y Alcance', '2. Modelo de Casos de Uso', '3. Diagramas (Flujos y Secuencias)', '4. Descripción de Requerimientos Funcionales', '5. Especificación de Interfaces', '6. Glosario'],
+                exampleTitle: 'Ejemplo de Especificación Funcional',
+                example: `
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85rem; background: rgba(255, 255, 255, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                    <tr style="background: rgba(7, 89, 133, 0.1); color: var(--color-trust);">
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">RF Nombre</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Prioridad</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Estado</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Fase</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Aprobado</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; font-style: italic; color: #334155;">Parametrización del monitoreo de procesos</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155;">Alta</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155;">Especificado</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155;">I</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155;">SI</td>
+                    </tr>
+                </table>
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 15px; font-size: 0.85rem; border-radius: 8px; color: #334155; text-align: justify; line-height: 1.5;">
+                    El sistema debe permitir al rol ADMINISTRADOR configurar la PARAMETRIZACIÓN requerida para el MONITOREO y la TRAZABILIDAD integral de los procesos vinculados a los componentes transaccionales (DLQ, SQS, SFTP o S3), con el propósito de facilitar la supervisión proactiva y el control continuo de su estado operativo.<br><br>
+
+                    <strong style="color: var(--color-trust);">Configuración de conexión para monitoreo de mensajería (campos obligatorios alfanuméricos):</strong>
+                    <ul style="margin-left: 20px; margin-bottom: 15px; margin-top: 5px; display: flex; flex-direction: column; gap: 4px;">
+                        <li><strong>Proceso asociado:</strong> Especificación detallada requerida.</li>
+                        <li><strong>Nombre de conexión DLQ / SQS:</strong> Identificador asignado a la configuración.</li>
+                        <li><strong>Correo del responsable:</strong> Dirección o grupo de correo del administrador o responsable del proceso.</li>
+                        <li><strong>Tipo Middleware:</strong> (RabbitMQ o AWS SQS).</li>
+                        <li><strong>Descripción:</strong> (opcional).</li>
+                        <li><strong>Estado:</strong> (activo o inactivo).</li>
+                    </ul>
+
+                    <strong style="color: var(--color-trust);">▪ Datos detalle de conexión mensajería (obligatorios y alfanuméricos):</strong>
+                    <div style="margin-top: 10px; margin-bottom: 12px; border-left: 3px solid rgba(47, 181, 141, 0.4); padding-left: 12px;">
+                        <strong style="display: flex; align-items: center; gap: 6px;"><i data-lucide="server" style="width: 14px; height: 14px;"></i> Tipo Middleware: RabbitMQ</strong>
+                        <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                            <li><strong>Regional</strong> (Define la región donde se realiza la conexión).</li>
+                            <li><strong>Access Key ID</strong> (Identificador único del acceso configurado).</li>
+                            <li><strong>Secret Access Key</strong> (Clave secreta asociada al Access Key ID para autenticación).</li>
+                            <li><strong>Etiqueta de procesos:</strong> (Proceso asociado / Nombre de conexión / tipo - RabbitMQ).</li>
+                        </ul>
+                    </div>
+                    <div style="border-left: 3px solid rgba(47, 181, 141, 0.4); padding-left: 12px;">
+                        <strong style="display: flex; align-items: center; gap: 6px;"><i data-lucide="cloud" style="width: 14px; height: 14px;"></i> Tipo Middleware: AWS SQS</strong>
+                        <ul style="margin-left: 20px; display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+                            <li><strong>Regional</strong> (Define la región donde se realiza la conexión).</li>
+                            <li><strong>Access Key ID</strong> (Identificador único del acceso configurado).</li>
+                            <li><strong>Secret Access Key</strong> (Clave secreta asociada para autenticación).</li>
+                            <li><strong>Session Token</strong> y <strong>Endpoint</strong>.</li>
+                            <li><strong>Etiqueta de procesos:</strong> (Proceso asociado / Nombre de conexión / tipo - AWS SQS).</li>
+                        </ul>
+                    </div>
+                </div>
+                `
+            },
+            'dhu': {
+                title: 'DHU: Documentos Historias de Usuario',
+                context: 'Metodologías Ágiles (Scrum) para banca digital (Estándar DHU).',
+                value: 'Especificación técnica con mockups de pantalla y criterios de aceptación Gherkin.',
+                impact: 'Reducción de la ambigüedad en el backlog, acelerando el Sprint Planning y la precisión en QA.',
+                structure: ['1. Título y Épica Relacionada', '2. Descripción (Como [rol] quiero [acción] para [beneficio])', '3. Criterios de Aceptación (Gherkin)', '4. Mockups / Wireframes', '5. Reglas de Validación'],
+                exampleTitle: 'Ejemplo de Historia de Usuario (HU001)',
+                example: `
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85rem; background: rgba(255, 255, 255, 0.6); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                    <tr style="background: rgba(47, 181, 141, 0.1); color: var(--color-trust);">
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left; width: 30%;">Rol</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Característica / Funcionalidad</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; font-weight: 600; color: #334155;">Yo como Sistema</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155; text-align: justify; line-height: 1.5;">Deseo Identificación de solicitudes de matrícula de nuevos asociados y cálculo de la fecha de vencimiento de la primera facturación.</td>
+                    </tr>
+                    <tr style="background: rgba(47, 181, 141, 0.1); color: var(--color-trust);">
+                        <th colspan="2" style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; text-align: left;">Razón / Objetivo</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="border: 1px solid rgba(0,0,0,0.05); padding: 10px; color: #334155; text-align: justify; line-height: 1.5;">Identificar correctamente a un nuevo asociado y calcular la fecha de vencimiento de su primera facturación, considerando un rango de validación entre la fecha de solicitud de matrícula y la fecha de vinculación.</td>
+                    </tr>
+                </table>
+                <h4 style="margin-top: 15px; margin-bottom: 10px; font-size: 0.9rem; color: var(--color-trust);"><i data-lucide="check-circle" style="width: 16px; height: 16px;"></i> Criterios de Aceptación Funcionales</h4>
+                
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155; margin-bottom: 10px;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px;">1. Identificación de nuevo asociado por rango de días</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; margin-bottom: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Contexto:</strong> <div>En caso de que el sistema reciba una solicitud de matrícula desde el sistema de Vinculación Integral.</div>
+                        <strong style="color: var(--color-trust);">Evento:</strong> <div>Cuando el sistema compare la fecha de solicitud de matrícula con la fecha de vinculación del asociado.</div>
+                        <strong style="color: var(--color-trust);">Resultado:</strong> <div>El sistema debe identificar al usuario como Nuevo Asociado cuando la diferencia entre la fecha de vinculación y la fecha de solicitud de matrícula sea entre 0 y 5 días calendario.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px;">2. Parametrización del rango de días</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Contexto:</strong> <div>En caso que el sistema ejecute la validación de fechas entre solicitud de matrícula y vinculación del asociado y/o cliente.</div>
+                        <strong style="color: var(--color-trust);">Evento:</strong> <div>Cuando el sistema determine si el asociado se encuentra dentro del rango de días definido.</div>
+                        <strong style="color: var(--color-trust);">Resultado:</strong> <div>El sistema debe utilizar un parámetro configurable en base de datos para definir el número máximo de días permitidos en la validación.</div>
+                    </div>
+                </div>
+                `
+            },
+            'qa': {
+                title: 'Matriz de Casos de Prueba (Trazabilidad QA)',
+                context: 'Ciclo completo de aseguramiento de calidad transaccional.',
+                value: 'Diseño integral de casos de prueba vinculados directamente a los requerimientos funcionales.',
+                impact: 'Certificación de 0 defectos críticos en el paso a producción de módulos financieros.',
+                structure: ['1. ID de Caso y Escenario', '2. Precondiciones necesarias', '3. Pasos de Ejecución detallados', '4. Datos de Prueba (Test Data)', '5. Resultado Esperado Obtenido'],
+                exampleTitle: 'Ejemplo de Estructura de Caso de Prueba',
+                example: `
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; font-size: 0.85rem; color: #334155;">
+                    <div style="padding: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); background: rgba(7, 89, 133, 0.05);">
+                        <strong style="color: var(--color-trust); font-size: 0.95rem;">CASO DE PRUEBA:</strong> Actualizar la información de contacto de un representante legal de un ente jurídico, siempre que la fecha de actualización sea >= 30 días.
+                    </div>
+
+                    <div style="padding: 12px; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                        <strong style="color: var(--color-trust); display: block; margin-bottom: 4px;">Description</strong>
+                        Validar el Proceso de actualización de la información de contacto del representante Legal para un ente jurídico dentro de nuestra base de datos.
+                        El sistema deberá considerar la regla de validez, obtenida previamente mediante consumo API contra Informa Colombia.
+                        En caso que el nuevo estado sea igual o mayor que 30 días, se debe actualizar la información del cliente.
+                    </div>
+
+                    <div style="display: flex; flex-wrap: wrap; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                        <div style="flex: 1; min-width: 200px; padding: 12px; border-right: 1px solid rgba(0,0,0,0.05); background: rgba(7, 89, 133, 0.02);">
+                            <strong style="color: var(--color-trust); display: block; margin-bottom: 4px;"><i data-lucide="play-circle" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> Precondiciones</strong>
+                            <ol style="margin-left: 20px; padding-left: 0; margin-top: 5px; margin-bottom: 0; line-height: 1.4;">
+                                <li>Hay un registro de un ente jurídico con un NIT en la base de datos de origen.</li>
+                                <li>Hay un registro de Información en la base de datos para la persona con número de documento asociado.</li>
+                                <li>Su fecha última de modificación en el sistema se encuentra vencida por 30 días o más.</li>
+                            </ol>
+                        </div>
+                        <div style="flex: 1; min-width: 200px; padding: 12px;">
+                            <strong style="color: var(--color-trust); display: block; margin-bottom: 4px;"><i data-lucide="list-ordered" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> Pasos (Steps)</strong>
+                            <ol style="margin-left: 20px; padding-left: 0; margin-top: 5px; margin-bottom: 0; line-height: 1.4;">
+                                <li>1. Ejecutar el servicio de actualización de estado para el Ente evaluado.</li>
+                                <li>2. Hacer llamado a la API u origen de datos correspondientes a Informa Colombia.</li>
+                                <li>3. Recibir el Payload del sistema externo y enviar confirmación.</li>
+                                <li>4. Validar en el log que indica que la información del Representante Legal se actualizó exitosamente.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div style="padding: 12px; background: rgba(47, 181, 141, 0.05);">
+                        <strong style="color: var(--color-action); display: block; margin-bottom: 4px;"><i data-lucide="check-circle" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle;"></i> Expected Results</strong>
+                        Verificar que:
+                        <ul style="margin-left: 20px; padding-left: 0; margin-top: 5px; margin-bottom: 0; list-style-type: disc; line-height: 1.4;">
+                            <li>El nombre del nuevo representante legal se actualizó correctamente en campos designados de Base de Datos Cliente.</li>
+                            <li>El teléfono y correo también coinciden con Informa Colombia.</li>
+                            <li>El log registre que el NIT fue actualizado (Si se aplica) incluyendo fecha técnica y payload.</li>
+                        </ul>
+                    </div>
+                </div>
+                `
+            },
+            'rnf': {
+                title: 'RNF: Requerimientos No Funcionales',
+                context: 'Definición de acuerdos de nivel de servicio y estándares técnicos y de seguridad aplicados.',
+                value: 'Establecimiento de límites operativos, atributos de calidad y rendimiento que un sistema debe soportar.',
+                impact: 'Prevención de cuellos de botella en picos transaccionales, garantizando estabilidad arquitectónica.',
+                structure: ['1. Rendimiento y Escalabilidad', '2. Seguridad y Control de Acceso', '3. Disponibilidad y Continuidad', '4. Interoperabilidad técnica'],
+                exampleTitle: 'Ejemplo de Requisitos No Funcionales',
+                example: `
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155; margin-bottom: 10px;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;"><i data-lucide="activity" style="width: 16px; height: 16px;"></i> Requerimiento Funcional Relacionado</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Contexto:</strong> 
+                        <div style="text-align: justify;">El sistema debe identificar las solicitudes de matrícula exitosas que cuentan con la tipificación de usuario "asociado colaborador", de acuerdo a la configuración descrita en el requerimiento funcional "Configuración para identificar nuevos clientes en procesos de matrícula".</div>
+                        <strong style="color: var(--color-trust);">Evento:</strong> 
+                        <div style="text-align: justify;">Cada vez que se ejecuta la verificación de los asociados colaboradores para determinar si mantienen dicha condición ("o ya no lo sean").</div>
+                        <strong style="color: var(--color-trust);">Resultado:</strong> 
+                        <div style="text-align: justify;">El sistema debe realizar de manera automática la actualización de la tipificación del usuario, cambiándola de "asociado colaborador" a "cliente", y enviar los datos actualizados al sistema matriculador.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155; margin-bottom: 10px;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;"><i data-lucide="layers" style="width: 16px; height: 16px;"></i> RN01 - Aislamiento y Ejecución Concurrente</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Regla:</strong> 
+                        <div style="text-align: justify;">El proceso de verificación y actualización de los asociados colaboradores <strong>no debe afectar, encolar ni degradar</strong> las nuevas solicitudes de matrícula que se estén ejecutando de forma simultánea en la plataforma.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155; margin-bottom: 10px;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;"><i data-lucide="clock" style="width: 16px; height: 16px;"></i> RN02 - Nivel de Servicio (SLA) Transaccional</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Regla:</strong> 
+                        <div style="text-align: justify;">La revisión, procesamiento y actualización de datos en el sistema para cada solicitud individual no debe tomar <strong>más de 30 segundos por registro</strong>.</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(0,0,0,0.05); padding: 12px; font-size: 0.85rem; border-radius: 8px; color: #334155;">
+                    <div style="font-weight: 700; color: var(--color-action); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;"><i data-lucide="shield-alert" style="width: 16px; height: 16px;"></i> RN03 - Tolerancia a Fallos y Auditoría Integral</div>
+                    <div style="display: grid; grid-template-columns: 80px 1fr; gap: 8px; line-height: 1.4;">
+                        <strong style="color: var(--color-trust);">Regla:</strong> 
+                        <div style="text-align: justify;">Si se presentan problemas técnicos (pérdida de conectividad, datos inconsistentes o timeouts) al momento de realizar el proceso de verificación y actualización, el sistema <strong>no lo puede terminar con éxito</strong>. En estos escenarios se debe realizar un <em>rollback</em> del registro y almacenar el detalle descriptivo del error en el <strong>log de auditoría</strong> para facilitar su trazabilidad técnica.</div>
+                    </div>
+                </div>
+                `
+            }
+            ,
+            'caseStudy2': {
+                title: 'Caso de Estudio: Automatización del Sistema de Débito Automático — InsurTech',
+                context: 'Entorno Bancario–InsurTech. Automatización de procesos críticos del sistema de Débito Automático, incluyendo validación de identidad, actualización de datos del representante legal, gestión de matrículas y cumplimiento parametrizable de reglas de negocio (HU001–HU008).',
+                value: 'Diseño y especificación funcional completa (HU001–HU008) para migrar de un sistema con lógica rígida y configuración manual a un modelo 100% automatizado y parametrizable, eliminando intervención humana en procesos críticos de validación financiera.',
+                impact: '↓ 65% intervención manual · ↑ 75% actualización automática de datos críticos · ↓ 50% errores en validación de identidad · ↑ 80% trazabilidad de procesos. Aprobado en primera revisión sin solicitudes de cambio de fondo.',
+                structure: ['1. Contexto del Proyecto', '2. Problema de Negocio', '3. Rol Individual y Contribuciones', '4. Enfoque de Solución (Antes vs. Después)', '5. Herramientas y Tecnologías', '6. Resultados e Impacto', '7. Trazabilidad QA (HU001–HU008)'],
+                exampleTitle: 'Automatización + Parametrización — Análisis del Caso',
+                example: `
+                <div style="background: rgba(7,89,133,0.04); border-left: 3px solid var(--color-trust); padding: 16px; border-radius: 4px 12px 12px 4px; margin-bottom: 18px; font-size: 0.82rem; color: #334155; font-style: italic;">
+                    ⚠️ Este documento ha sido anonimizado con fines de confidencialidad. Los nombres de clientes, sistemas propietarios e identificadores han sido reemplazados por referencias genéricas del sector.
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Problema de Negocio</h4>
+                <p style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 10px;">
+                    El sistema presentaba una <strong>alta dependencia de configuraciones manuales y lógica rígida</strong>, generando procesos lentos, riesgo de inconsistencias en datos legales y dificultad para adaptarse a cambios del negocio sin intervención técnica.
+                </p>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Solución — Antes vs. Después</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                    <div style="background: rgba(220,38,38,0.04); border: 1px solid rgba(220,38,38,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #dc2626; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">❌ Antes</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Configuraciones manuales, lógica embebida en código, validaciones no automatizadas, alta exposición a error humano en procesos regulatorios.</p>
+                    </div>
+                    <div style="background: rgba(22,163,74,0.04); border: 1px solid rgba(22,163,74,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #16a34a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">✅ Después</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Parametrización dinámica (frecuencia, fechas, horas), validación automática de antigüedad (&gt;30 días), integración con servicios externos y auditoría completa del sistema.</p>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Contribuciones Clave como Analista de Requisitos</h4>
+                <ul style="font-size: 0.87rem; color: #334155; line-height: 1.8; padding-left: 18px; margin-bottom: 16px;">
+                    <li>Elicitación de requerimientos funcionales y no funcionales con stakeholders clave</li>
+                    <li>Autoría de 8 historias de usuario (HU001–HU008) con criterios de aceptación detallados</li>
+                    <li>Definición de reglas de negocio para validaciones y procesos automáticos</li>
+                    <li>Diseño de lógica parametrizable para configuraciones dinámicas (GoAnywhere)</li>
+                    <li>Validación de integraciones con servicios externos (APIs y sistemas terceros)</li>
+                    <li>Diseño de escenarios QA alineados a cada historia de usuario</li>
+                    <li>Garantía de trazabilidad entre HU, criterios de aceptación y pruebas</li>
+                </ul>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Trazabilidad QA — HU001 a HU008</h4>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 16px;">
+                    <tr style="background: rgba(7, 89, 133, 0.08); color: var(--color-trust);">
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; width: 80px; text-align: center;">ID HU</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; text-align: left;">Descripción</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; width: 130px; text-align: left;">Escenarios QA clave</th>
+                    </tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU001</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Parametrización de ejecuciones automáticas</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Guardado, rangos, cancelación, ejecución</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU002</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validación de antigüedad (&gt;30 días) y actualización de datos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Condición, consulta externa, auditoría</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU003</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validación de identidad del representante legal</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Identificación NIT, integración validador</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU004</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Desactivación de matrícula con motivo obligatorio</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Obligatoriedad, selección única, mensajes</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU005</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Mensaje informativo al usuario</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Visualización y contenido del mensaje</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU006</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Integración con servicio externo de validación</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Parámetros enviados, estructura request</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU007</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Identificación de nuevo asociado por rango de días</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Cálculo fecha, parametrización</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">HU008</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Integración con API de pagos (endpoint externo)</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Compatibilidad, errores, pruebas integración</td></tr>
+                </table>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Herramientas & Tecnologías</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">SQL Server</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">GoAnywhere (GAW)</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">REST API</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">IEEE 830</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Historias de Usuario</span>
+                    <span style="background: rgba(47,181,141,0.1); color: var(--color-action); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Servicios Externos de Validación</span>
+                    <span style="background: rgba(47,181,141,0.1); color: var(--color-action); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Core Financiero</span>
+                </div>
+
+                <div style="background: rgba(47,181,141,0.06); border-left: 4px solid var(--color-action); border-radius: 4px 12px 12px 4px; padding: 16px; font-size: 0.87rem; color: #334155; line-height: 1.6;">
+                    <strong style="color: var(--color-action);">Conclusión:</strong> La solución evolucionó hacia un sistema <strong>automatizado, flexible y confiable</strong>, reemplazando configuraciones manuales por reglas dinámicas parametrizables. Esto elevó la eficiencia operativa, la trazabilidad y la calidad de la información — sin necesidad de cambios en código para adaptar reglas de negocio.
+                </div>
+                `
+            },
+            'caseStudy3': {
+                title: 'Caso de Estudio: Monitoreo Inteligente de Colas y Trazabilidad Operativa',
+                context: 'Entorno Bancario–InsurTech. Diseño y especificación funcional de un sistema integral de monitoreo, trazabilidad y gestión de mensajería y archivos, que permite supervisar procesos operativos críticos de forma automatizada y centralizada.',
+                value: 'Especificación funcional completa que reemplazó la dependencia de revisiones manuales por un modelo de monitoreo automático en tiempo real, con trazabilidad de eventos, gestión de roles, catálogos parametrizables, notificaciones automáticas y reportes operativos.',
+                impact: '↑ 80% visibilidad de procesos operativos · ↓ 60% tiempos de detección de fallos · ↑ 70% automatización del monitoreo · ↑ 85% trazabilidad de eventos. Cero reprocesos manuales para detección de incidentes críticos.',
+                structure: ['1. Acceso y Gestión de Roles', '2. Gestión de Catálogos', '3. Parametrización Operativa', '4. Monitoreo de Procesos en Tiempo Real', '5. Trazabilidad de Eventos', '6. Notificaciones Automáticas', '7. Visualización — Tablero de Control', '8. Reprocesamiento de Eventos', '9. Reportes Operativos', '10. Auditoría Integral'],
+                exampleTitle: 'Monitoreo Automático + Trazabilidad — Análisis del Caso',
+                example: `
+                <div style="background: rgba(7,89,133,0.04); border-left: 3px solid var(--color-trust); padding: 16px; border-radius: 4px 12px 12px 4px; margin-bottom: 18px; font-size: 0.82rem; color: #334155; font-style: italic;">
+                    ⚠️ Este documento ha sido anonimizado con fines de confidencialidad. Los nombres de clientes, sistemas propietarios e identificadores han sido reemplazados por referencias genéricas del sector.
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Problema de Negocio</h4>
+                <p style="font-size: 0.88rem; color: #334155; line-height: 1.7; margin-bottom: 10px;">
+                    No existía un <strong>control centralizado ni automatizado</strong> para monitorear, rastrear y gestionar los procesos críticos del sistema. Los equipos dependían de revisiones manuales, con baja visibilidad sobre el estado de las operaciones y dificultad para detectar fallos oportunamente.
+                </p>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Solución — Antes vs. Después</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+                    <div style="background: rgba(220,38,38,0.04); border: 1px solid rgba(220,38,38,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #dc2626; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">❌ Antes</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Revisiones manuales, sin visibilidad centralizada, fallos detectados tardíamente, configuraciones rígidas, baja trazabilidad de eventos y operaciones.</p>
+                    </div>
+                    <div style="background: rgba(22,163,74,0.04); border: 1px solid rgba(22,163,74,0.15); border-radius: 10px; padding: 14px;">
+                        <p style="font-size: 0.75rem; font-weight: 700; color: #16a34a; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">✅ Después</p>
+                        <p style="font-size: 0.83rem; color: #334155; line-height: 1.6;">Monitoreo automático en tiempo real, catálogos parametrizables, notificaciones automáticas de fallos, tablero centralizado y trazabilidad completa de eventos.</p>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Contribuciones Clave como Analista de Requisitos</h4>
+                <ul style="font-size: 0.87rem; color: #334155; line-height: 1.8; padding-left: 18px; margin-bottom: 16px;">
+                    <li>Elicitación de requerimientos con stakeholders y equipos técnicos</li>
+                    <li>Definición de funcionalidades de monitoreo, trazabilidad y reprocesamiento</li>
+                    <li>Diseño de lógica parametrizable para catálogos y configuraciones dinámicas</li>
+                    <li>Especificación de reglas de negocio para validaciones, fechas y procesos activos</li>
+                    <li>Definición de estructuras de auditoría e integridad de datos</li>
+                    <li>Diseño de escenarios QA para 10 dominios funcionales</li>
+                    <li>Aseguramiento de trazabilidad funcional: requisitos → desarrollo → pruebas</li>
+                </ul>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Trazabilidad QA — Dominios Funcionales Cubiertos</h4>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 16px;">
+                    <tr style="background: rgba(7, 89, 133, 0.08); color: var(--color-trust);">
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; width: 85px; text-align: center;">Dominio</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; text-align: left;">Funcionalidad</th>
+                        <th style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; width: 160px; text-align: left;">Escenarios QA clave</th>
+                    </tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Acceso</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Autenticación y gestión de roles</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Autenticación, roles, permisos</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Catálogos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Creación, edición y búsqueda de catálogos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Unicidad, restricciones de estado</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Param.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Configuración de fechas, reglas y festivos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Validación, restricciones activas</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Monitoreo</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Ejecución automática y detección de fallos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Frecuencia, eventos, actualización pantalla</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Trazab.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Seguimiento de procesos e información</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Registro, ejecución por fechas</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Notif.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Envío automático de alertas</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Envío, contenido de notificación</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Visual.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Tablero centralizado de monitoreo</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Filtros y visualización de datos</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Reproces.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Reprocesamiento de eventos fallidos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Ejecución, actualización de estado</td></tr>
+                    <tr><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Reportes</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Generación y descarga de reportes operativos</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Formato y descarga requerida</td></tr>
+                    <tr style="background: rgba(0,0,0,0.01);"><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; font-weight: 700; color: var(--color-trust); text-align: center;">Audit.</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Registro de eventos e integridad</td><td style="border: 1px solid rgba(0,0,0,0.08); padding: 8px; color: #334155;">Completitud, integridad del log</td></tr>
+                </table>
+
+                <h4 style="color: var(--color-trust); margin-bottom: 10px; font-family: var(--font-head);">Herramientas &amp; Tecnologías</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">SQL Server</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">REST APIs</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Mensajería (SQS / RabbitMQ)</span>
+                    <span style="background: rgba(7,89,133,0.08); color: var(--color-trust); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Transferencia de Archivos (SFTP/S3)</span>
+                    <span style="background: rgba(47,181,141,0.1); color: var(--color-action); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Historias de Usuario</span>
+                    <span style="background: rgba(47,181,141,0.1); color: var(--color-action); padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;">Monitoreo en Tiempo Real</span>
+                </div>
+
+                <div style="background: rgba(47,181,141,0.06); border-left: 4px solid var(--color-action); border-radius: 4px 12px 12px 4px; padding: 16px; font-size: 0.87rem; color: #334155; line-height: 1.6;">
+                    <strong style="color: var(--color-action);">Conclusión:</strong> La solución estableció un <strong>sistema robusto de monitoreo y trazabilidad centralizado</strong>, eliminando la dependencia de revisiones manuales. El sistema detecta fallos automáticamente, genera alertas en tiempo real y registra cada evento con integridad total, alineado con buenas prácticas de ingeniería de requisitos.
+                </div>
+                `
+            }
+        };
+
+        function openModal(id) {
+            const data = modalData[id];
+
+            let structureHtml = '';
+            if (data.structure) {
+                const listItems = data.structure.map(item => `<li>${item}</li>`).join('');
+                structureHtml = `
+                    <h4 style="margin-top: 20px;"><i data-lucide="layers"></i> Estructura del Documento</h4>
+                    <ul style="margin-left: 24px; margin-top: 8px; color: var(--color-text-light); font-size: 0.95rem; display: flex; flex-direction: column; gap: 4px;">
+                        ${listItems}
+                    </ul>
+                `;
+            }
+
+            let exampleHtml = '';
+            if (data.exampleTitle && data.example) {
+                exampleHtml = `
+                    <div style="margin-top: 30px; background: rgba(255,255,255,0.4); border: 1px solid rgba(47, 181, 141, 0.3); border-radius: 12px; padding: 25px;">
+                        <h4 style="margin-top: 0; color: var(--color-trust); margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
+                            <i data-lucide="file-check"></i> ${data.exampleTitle}
+                        </h4>
+                        <div>
+                            ${data.example}
+                        </div>
+                    </div>
+                `;
+            }
+
+            const content = `
+                <h3 class="modal-title">${data.title}</h3>
+                <div class="modal-body">
+                    <h4><i data-lucide="info"></i> Contexto Real de Uso</h4>
+                    <p>${data.context}</p>
+                    
+                    <h4><i data-lucide="zap"></i> Valor Estratégico Aportado</h4>
+                    <p>${data.value}</p>
+                    
+                    ${structureHtml}
+                    ${exampleHtml}
+                    
+                    <div class="modal-impact">
+                        <h4><i data-lucide="trending-up"></i> Impacto Medible / Resultado</h4>
+                        <p>${data.impact}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('modalContent').innerHTML = content;
+            document.getElementById('artefactModal').classList.add('active');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('artefactModal').classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
