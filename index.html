@@ -909,10 +909,10 @@
                 `
             },
             'ddi': {
-                title: 'DDI: Diseño Inicial de Sistema',
+                title: 'DDI: Documento Diseño Inicial',
                 context: 'Poyecto de integración masiva (Módulos administrador solicitud de matrícula /Core Bancario.).',
                 value: 'Definición la captura de datos, integraciones de servicios y lógica de flujos transaccionales.',
-                impact: 'Reducción del 30% en incidentes por desalineación técnica durante el desarrollo de microservicios.',
+                impact: 'Reducción del 30% en incidentes por desalineación técnica durante el desarrollo de microservicios y/o la captura de la información.',
                 structure: ['1. Objetivo e Interesados', '2. Diagramas de Contexto / Arquitectura de los requisitos', '3. Captura de los Datos', '4. Diccionario de Servicios (APIs)', '5. Reglas de Integración'],
                 exampleTitle: 'CARÁCTERÍSTICAS DE USABILIDAD',
                 example: `
@@ -921,18 +921,25 @@
                 </div>
                 
                 <div style="color: #004d66; font-size: 0.95rem; margin-bottom: 5px; display: flex; align-items: center; gap: 6px;">
-                    <span style="border: 1px solid #777; font-size: 14px; font-weight: bold; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; line-height: 1; cursor: default;">+</span> MOCKUP_13. Funcionalidad generación de caratulas
+                    <span style="border: 1px solid #777; font-size: 14px; font-weight: bold; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; line-height: 1; 
+					cursor: default;">+</span> MOCKUP_13. 
+					Funcionalidad: Captura de datos mediante el formulario de solicitud de matrícula, para iniciar el proceso de matrícula (con transición al estado "Exitoso") 
+					y la activación del débito automático.
                 </div>
 
                 <table style="width: 100%; border-collapse: collapse; font-family: 'Arial', sans-serif; font-size: 0.85rem; border: 2px solid #000; background: #fff; color: #000; margin-bottom: 10px;">
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px 10px; width: 25%;">Nombre</td>
-                        <td colspan="2" style="border: 1px solid #000; padding: 8px 10px; color: #334155;">Generación de Carátulas Digitales (Registro)</td>
+                        <td colspan="2" style="border: 1px solid #000; padding: 8px 10px; color: #334155;">Formulario solicitud de matrícula (Registro)</td>
                         <td style="border: 1px solid #000; padding: 8px 10px; background: #e5e5e5; width: 15%;"></td>
                     </tr>
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px 10px;">Propósito</td>
-                        <td colspan="3" style="border: 1px solid #000; padding: 8px 10px; text-align: justify; color: #334155;">Proporcionar una interfaz analítica que permita configurar, validar y emitir carátulas resumen. Minimiza el error de digitación mediante carga predictiva y validación visual por bloques semánticos.</td>
+                        <td colspan="3" style="border: 1px solid #000; padding: 8px 10px; text-align: justify; color: #334155;">
+						Proporcionar una interfaz intuitiva que permita capturar, validar y confirmar la información de la solicitud de matrícula. Minimiza el error de digitación
+						mediante la carga de datos personales y bancarios: si el cliente cuenta con una cuenta en el banco, se cargan automáticamente los números de cuenta; en caso
+						contrario, se valida la longitud de la cuenta bancaria según el banco correspondiente. Todo esto acompañado de validación visual por bloques
+						semánticos, asegurando la correcta transición al estado "Exitoso" y la activación del débito automático.</td>
                     </tr>
                     <tr>
                         <td style="border: 1px solid #000; padding: 8px 10px;">RQF Asociado</td>
@@ -942,8 +949,12 @@
                         <td colspan="4" style="border: 1px solid #000; padding: 8px 10px;">
                             <div style="margin-bottom: 12px; font-size: 0.95rem;">Descripción del funcionamiento y la pantalla que se está rescribiendo:</div>
                             <div style="font-size: 0.85rem; text-align: justify; margin-bottom: 15px; color: #334155;">
-                                La pantalla moderniza el antiguo formulario monolítico, dividiendo la entrada de datos en: Datos Personales, Datos Bancarios y Datos del beneficiario. El sistema inyecta nativamente los datos básicos mostrados en post-its (Datos personales en Solo lectura). Adicionalmente, el formulario incluye <strong>lógica condicional</strong>: solo se despliega la sección obligatoria de "Datos personales del beneficiario" si el usuario indica que la cuenta <em>no es propia, es decir, el titular de la cuenta bancaria no es el dueño de la cuenta de cobro (facturación) </em> en el bloque anterior. La acción de "Actualizar" orquesta el consumo de la API de integración registrando la información final en base de datos con los sistemas que hacen parte de la operación.
-                            </div>
+                                La pantalla moderniza el antiguo formulario monolítico, dividiendo la entrada de datos en: Datos Personales, Datos Bancarios y Datos del beneficiario. 
+								El sistema inyecta nativamente los datos básicos mostrados en post-its (Datos personales en Solo lectura). Adicionalmente, el formulario incluye <strong>
+								lógica condicional</strong>: solo se despliega la sección obligatoria de "Datos personales del beneficiario" si el usuario indica que la cuenta
+								<em>no es propia, es decir, el titular de la cuenta bancaria no es el dueño de la cuenta de cobro (facturación) </em> en el bloque anterior. 
+								La acción de "Actualizar" orquesta el consumo de la API de integración registrando la información final en base de datos con los sistemas que hacen parte de la operación.
+								</div>
                             <div style="width: 100%; border: 2px solid #000; background: #f8fafc; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; overflow: hidden; padding: 10px;">
                                 <img src="Anexos/Imagen2.png" alt="Prototipo Mockup 13 Pantalla principal" style="max-width: 100%; max-height: 400px; object-fit: contain;">
                             </div>
